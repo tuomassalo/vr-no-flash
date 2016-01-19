@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <title>No Flash &#x2764;</title>
+  </head>
+  <body>
+    <h1>No Flash &#x2764;</h1>
+
+    <p>Tässä puukko, jolla VR:n verkkokaupan paikanvalinnan saa toimimaan ilman Flashia ja näyttämän koko junan kerralla. Toiminee uudehkoilla selaimilla. Käytä näin:</p>
+    <ol>
+      <li>Lisää alla oleva bookmarklet selaimesi kirjanmerkkeihin. (Tämä täytyy tehdä vain kerran.)</li>
+      <li>Mene ostamaan lippua. Kun näet "VALITSE PAIKAT"-napin, valitse bookmarklet. Nappiin tulee sydän perän.</li>
+      <li>Paina nappia.</li>
+    </ol>
+
+    <p>Huom: varsinkin iOS:lla bookmarkletin lisäminen on mutkikasta. Pitää ensin bookmarkata tuo #-versio ja sitten
+    käydä muokkaamassa siitä se risu ja risua edeltävä osa pois.</p>
+
+
+    <ul>
+      <li>Bookmarklet:                        <a id="bookmarklet"     >No Flash &#x2764;</a></li>
+      <li>Bookmarklet, jossa edessä '#': <a id="bookmarklet-hash">No Flash &#x2764;</a></li>
+      <li>Bookmarkletin sisältö:    <input id="bookmarklet-text"/></li>
+    </ul>
+
+    <p>Tämän bookmarkletin pitäisi olla harmiton, mutta käyttö omalla vastuulla. VR:llä ei ole tämän kanssa mitään tekemistä. &mdash; <a href="mailto:tuomas.salo@iki.fi">tekijä</a></p>
+
+    <img style="box-shadow: 0px 0px 20px -2px rgba(0,0,0,0.75);" src="vr.gif"/>
+
+    <script>
+      var baseUrl = location.href.replace(/(index\.html|\?|#).*/, '');
+
+      var bookmarklet = "javascript:(function(d){var s=d.createElement('script');s.src='" + baseUrl + "nf.min.js?D='+(new Date()).getTime();d.head.appendChild(s)})(document)";
+
+      document.getElementById('bookmarklet'     ).href = bookmarklet;
+      document.getElementById('bookmarklet-hash').href = '#' + bookmarklet;
+      document.getElementById('bookmarklet-text').value = bookmarklet;
+    </script>
+  </body>
+</html>
+
