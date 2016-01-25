@@ -262,7 +262,7 @@
         window.setTimeout(processShowCoachQueue, 1);
       } else {
         $.ajaxSetup({cache: true});
-        $.getScript(scriptBase + '/coaches/' + coach.type + '.js');
+        $.getScript(scriptBase + 'coaches/' + coach.type + '.js');
         $.ajaxSetup({cache: false});
       }
     }
