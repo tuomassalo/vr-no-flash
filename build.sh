@@ -20,4 +20,4 @@ PYTHONPATH=./pyswf python parse-coachmap.py
 
 node_modules/uglifyjs/bin/uglifyjs -m < nf.js > dist/nf.min.js
 
-
+echo 'Now copy the dist/ directory to a location on an HTTPS server.'
