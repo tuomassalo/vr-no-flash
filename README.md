@@ -3,7 +3,7 @@ vr-no-flash
 
 Tässä puukko, jolla VR:n verkkokaupan paikanvalinnan saa toimimaan ilman Flashia ja näyttämän koko junan kerralla. Toiminee uudehkoilla selaimilla. Käyttöohjeita lisää index.html:ssä.
 
-Kokeile täällä: https://venko.net/naapuri/vr/
+Kokeile täällä: https://vr.aarre.net/
 
 Jos haluat kääntää projektin itse, tarvitset ainakin nämä:
 
