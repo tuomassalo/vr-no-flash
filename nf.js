@@ -257,6 +257,14 @@
       $heading.append($('<span/>').text(coach.title + ' (' + coach.type + ')'));
       coach.$dstElem.append($heading);
 
+      // Quick hack to show IM1A as IM1 (Currently no idea why it works in Flash)
+      var coachTypeAliasMap = {
+        IM1A: 'IM1',
+      };
+      if(coachTypeAliasMap[coach.type]) {
+        coach.type = coachTypeAliasMap[coach.type];
+      }
+
       showCoachQueue.push([coach.type, function() {
         _drawCoach(coach);
       }]);
