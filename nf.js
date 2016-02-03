@@ -56,6 +56,9 @@
 
   var scriptBase = $('script[src*="/nf.js"], script[src*="/nf.min.js"]').attr('src').replace(/nf\.(min\.)?js.*/, '');
 
+  // NB: This list is populated by build.sh
+  var knownCoachTypes = {/*KNOWN_COACH_TYPES*/};
+
   // SVG files are stored to this object. Key: coach type, eg. "EDM", value: SVG string.
   var coachDefinitions = {};
 
@@ -257,6 +260,11 @@
       showCoachQueue.push([coach.type, function() {
         _drawCoach(coach);
       }]);
+
+      if(Object.keys(knownCoachTypes).length && !knownCoachTypes[coach.type]) {
+        alert("Vaunutyyppiä '" + coach.type + "' ei löydy. :(");
+      }
+
       if(coachDefinitions[coach.type]) {
         // don't "release zalgo"
         window.setTimeout(processShowCoachQueue, 1);
