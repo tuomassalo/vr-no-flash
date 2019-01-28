@@ -1,3 +1,5 @@
+[Päivitys 28.1.2019: tämä toimii yhä.]
+
 vr-no-flash
 ===========
 
