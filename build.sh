@@ -32,7 +32,7 @@ ls dist/coaches/*.svg | perl -F/ -awlne '
     print qq!<body style="background-color:#000; x-moz-column-count:7">!;
     print qq!<style>img {width:300px; padding: 5px; background:white; border-radius: 5px; margin: 4px}</style>!;
   }
-  print qq!<a href="$F[1]"><img src="$F[-1]"></a>!;
+  print qq!<a href="$F[-1]"><img src="$F[-1]"></a>!;
 ' > dist/coaches/all.html
 
 echo 'To see all coaches, open dist/coaches/all.html'
