@@ -56,7 +56,8 @@ for (frame_idx, coach_type) in enumerate([l.frameName for l in coaches]):
 
   # optimize:
   # convertPathData would halve the filesize, but is buggy, see https://github.com/svg/svgo/issues/483
-  call(["node_modules/svgo/bin/svgo", "--disable", "convertPathData", "--quiet", svg_filename])
+  # call(["node_modules/svgo/bin/svgo", "--disable", "convertPathData", "--quiet", svg_filename])
+  call(["node_modules/svgo/bin/svgo", "--quiet", svg_filename])
 
   with open(svg_filename, 'r') as final_svg:
     js_contents = "nfDefineCoach(%s)" % json.dumps(dict(type=coach_type, svg=final_svg.read()))
