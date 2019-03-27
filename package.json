@@ -1,0 +1,20 @@
+{
+  "name": "vr-no-flash",
+  "version": "1.0.0",
+  "main": "nf.js",
+  "dependencies": {},
+  "devDependencies": {
+    "svgo": "1.2.0",
+    "uglify-js": "3.5.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tuomassalo/vr-no-flash.git"
+  },
+  "author": "Tuomas Salo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tuomassalo/vr-no-flash/issues"
+  },
+  "homepage": "https://github.com/tuomassalo/vr-no-flash#readme"
+}
