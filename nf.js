@@ -195,12 +195,12 @@
       };
 
       loadAdjacentCoaches(context, originDir);
-      drawCoach(coaches[coachNumber]);
+      drawCoach(coaches[coachNumber], $('input#selectedPlaceType', context).val());
     }
 
 
     // Add filters for coloring the seats.
-    var filters = 
+    var filters =
       '<filter id="status-na">' +
       '</filter>' +
       '<filter id="status-free">' +
@@ -252,10 +252,17 @@
       });
     }
 
-    function drawCoach(coach) {
+    function drawCoach(coach, placeType) {
       var $heading = $('<h2/>').text("VAUNU " + coach.number);
       $heading.append($('<span/>').text(coach.title + ' (' + coach.type + ')'));
       coach.$dstElem.append($heading);
+      if(placeType !== 'SEAT') {
+        coach.$dstElem.append(
+          $('<span/>')
+            .text('HUOM! Makuupaikkojen valinta ei ehkä toimi oikein - verkkokauppa saattaa ehdottaa väärää hintaa.')
+            .css({color:'red', paddingLeft: '20px'})
+          )
+      }
 
       // Quick hack to show IM1A as IM1 (Currently no idea why it works in Flash)
       var coachTypeAliasMap = {
